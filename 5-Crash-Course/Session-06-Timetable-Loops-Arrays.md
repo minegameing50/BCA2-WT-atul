@@ -235,6 +235,40 @@ We'll use `table-warning` to highlight today's row!
 
 ---
 
+### Bootstrap Alert Classes
+
+```html
+<div class="alert alert-info" role="alert">
+  This is an informational message.
+</div>
+```
+
+`alert` is the **base class** for Bootstrap's alert component — colored notification boxes.
+Add a variant class to set the color:
+
+| Class | Color | Used For |
+|-------|-------|----------|
+| `alert-info` | Blue | General information |
+| `alert-success` | Green | Positive messages |
+| `alert-warning` | Yellow | Caution messages |
+| `alert-danger` | Red | Error messages |
+
+> **Analogy:** Alerts are like the **notice board** in your college hallway. The board
+> background color tells you the type: blue for information, green for good news,
+> red for urgent warnings.
+
+### `role="alert"` — Accessibility Attribute
+
+```html
+<div class="alert alert-info" role="alert">
+```
+
+The `role="alert"` attribute tells screen readers to **announce this content immediately**
+when it appears or changes — like an important PA system announcement. Always add it to
+Bootstrap alert boxes!
+
+---
+
 ## 📖 JavaScript: Arrays
 
 ### What Is an Array?
@@ -533,6 +567,15 @@ your `index.html`:
 - `scope="col"` and `scope="row"` → accessibility
 - `colspan="4"` → Saturday's lab spans 4 period columns
 - `caption-top` → shows the caption above the table (Bootstrap class)
+- `alert alert-info` → Bootstrap alert box in blue (informational notification)
+- `role="alert"` → accessibility: screen readers announce content immediately
+- `btn btn-outline-success` → green outline button
+
+> 📌 **First Time Seeing `alert` and `alert-info`?** `alert` is Bootstrap's notification box component — a colored box for messages. `alert-info` makes it blue. We use it for the "Today's Classes" summary. Other variants: `alert-success` (green), `alert-warning` (yellow), `alert-danger` (red).
+
+> 📌 **First Time Seeing `role="alert"`?** This accessibility attribute tells screen readers to announce the content immediately when it changes — like a PA system announcement. Always add it to Bootstrap alert boxes!
+
+> 📌 **First Time Seeing `btn-outline-success`?** It follows the same `btn-outline-*` pattern as `btn-outline-primary` (Session 4) and `btn-outline-secondary` (Session 5), but in green.
 
 ---
 
@@ -616,6 +659,8 @@ function highlightSubject() {
 }
 ```
 
+> 📌 **First Time Seeing `alert-success`?** Just like `alert-info` is blue, `alert-success` makes the alert box green — used here to show the happy "Sunday — no classes!" message.
+
 ---
 
 ### Step 3: Understanding the Code — Walk-Through
@@ -695,6 +740,25 @@ Open `index.html` in your browser and check:
 | `table-danger` | Red row/cell |
 | `table-primary` | Blue row/cell |
 | `caption-top` | Caption above table |
+| `alert` | Base alert (notification box) component |
+| `alert-info` | Blue information alert |
+| `alert-success` | Green success alert |
+| `table-secondary` | Gray row/cell |
+| `btn-outline-success` | Green outline button |
+
+### Bootstrap Classes (from Previous Sessions)
+
+| Class | Effect |
+|-------|--------|
+| `container` | Fixed-width centered wrapper (from Session 1) |
+| `py-5` | Padding top + bottom — 3rem (from Session 2) |
+| `btn` | Base button styling (from Session 2) |
+| `mt-3` | Margin top — 1rem (from Session 2) |
+| `bg-light` | Light gray background (from Session 3) |
+| `text-center` | Center-align text (from Session 3) |
+| `text-muted` | Gray subdued text (from Session 3) |
+| `mb-2` | Margin bottom — 0.5rem (from Session 3) |
+| `mb-4` | Margin bottom — 1.5rem (from Session 3) |
 
 ### JavaScript — Arrays & Loops
 
@@ -711,6 +775,26 @@ Open `index.html` in your browser and check:
 | Add class | `el.classList.add("cls")` | Highlight |
 | Remove class | `el.classList.remove("cls")` | Un-highlight |
 | Toggle class | `el.classList.toggle("cls")` | Switch on/off |
+
+### HTML Tags (from Previous Sessions)
+
+| Tag | Purpose | Example |
+|-----|---------|---------|
+| `<section>` | Thematic content group (from Session 2) | `<section id="timetable">` |
+| `<div>` | Generic container (from Session 1) | `<div class="container">` |
+| `<h2>` | Second-level heading (from Session 3) | `<h2>Class Timetable</h2>` |
+| `<p>` | Paragraph of text (from Session 2) | `<p class="lead">...</p>` |
+| `<button>` | Clickable button (from Session 4) | `<button class="btn">` |
+| `<br>` | Line break (from Session 1) | Used in `document.write()` output |
+
+### HTML Attributes
+
+| Attribute | Used On | What It Does |
+|-----------|---------|--------------|
+| `role="alert"` | Alert `<div>` | Screen readers announce content immediately |
+| `id` | Any element | Unique identifier for JS/CSS targeting (from Session 1) |
+| `class` | Any element | Applies CSS/Bootstrap styles (from Session 1) |
+| `onclick` | `<button>` | Runs JavaScript function when clicked (from Session 4) |
 
 ---
 
@@ -739,6 +823,8 @@ Add a "Lunch Break" row between morning and afternoon periods:
   <th scope="row" colspan="6" class="text-center">🍽️ Lunch Break (1:15 PM – 2:00 PM)</th>
 </tr>
 ```
+
+> 📌 **First Time Seeing `table-secondary`?** Another Bootstrap table color variant — gray background. Like `table-warning` (yellow) and `table-success` (green), but neutral gray. Perfect for break rows that shouldn't draw attention.
 
 > ⚠️ After adding the break row, your JavaScript row indexing changes! You'll need to
 > adjust the highlight logic since the break row shifts row indices.
