@@ -301,14 +301,14 @@
     <!-- ============================================
          FACULTY & STAFF
          ============================================ -->
-    <section id="faculty">
-      <div>
-        <h2>
-          <i></i>Faculty &amp; Staff
+    <section id="faculty" class="py bg-light">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-2">
+          <i class="bi bi-people-fill me-2"></i>Faculty &amp; Staff
         </h2>
-        <p>
+        <p class="text-center text-muted mb-5">
           Meet the dedicated educators guiding BCA 2025-26
-          <span id="expandedCount" title="Faculty bios expanded">0 expanded</span>
+          <span class="badge bg-primary ms-2" id="expandedCount" data-bs-toggle="tooltip" title="Faculty bios expanded">0 expanded</span>
         </p>
 
         <!-- 
@@ -317,29 +317,29 @@
           and {Faculty-N-Bio} with real faculty details from your department.
           Visit https://meu.edu.in/faculty-of-computer-science-and-application/ for reference.
         -->
-        <div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           <!-- Faculty 1 -->
-          <div>
-            <article>
-              <img src="img/Faculty-1.jpg" alt="Dr. Nilesh Jain">
-              <div>
-                <h5>Dr. Nilesh Jain</h5>
-                <p>{Faculty-1-Designation}</p>
-                <span title="{Faculty-1-Subject}">{Faculty-1-Subject}</span>
-                <p>
+          <div class="col">
+            <article class="card h-100 faculty-card shadow-sm">
+              <img src="img/Faculty-1.jpg" class="card-img-top" alt="Dr. Nilesh Jain">
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold">Dr. Nilesh Jain</h5>
+                <p class="text-muted mb-1">{Faculty-1-Designation}</p>
+                <span class="badge bg-warning text-dark mb-3" data-bs-toggle="tooltip" title="{Faculty-1-Subject}">{Faculty-1-Subject}</span>
+                <p class="faculty-detail d-none">
                   {Faculty-1-Bio — Add a brief professional biography of the faculty member here.
                   Include their qualifications, experience, and areas of expertise.}
                 </p>
-                <button>Read More</button>
+                <button class="btn btn-outline-primary btn-sm read-more-btn">Read More</button>
               </div>
             </article>
           </div>
 
           <!-- Faculty 2 -->
-          <div>
-            <article>
+          <div class="col">
+            <article class="card h-100 faculty-card shadow-sm">
               <img src="img/Faculty-2.jpeg" alt="Anamika Soni">
-              <div>
+              <div class="card-body text-center">
                 <h5>Anamika Soni</h5>
                 <p>{Faculty-2-Designation}</p>
                 <span title="{Faculty-2-Subject}">{Faculty-2-Subject}</span>
@@ -353,10 +353,10 @@
           </div>
 
           <!-- Faculty 3 -->
-          <div>
-            <article>
+          <div class="col">
+            <article class="card h-100 faculty-card shadow-sm">
               <img src="img/Faculty-3.jpg" alt="Vinit Soni">
-              <div>
+              <div class="card-body text-center">
                 <h5>Vinit Soni</h5>
                 <p>{Faculty-3-Designation}</p>
                 <span title="{Faculty-3-Subject}">{Faculty-3-Subject}</span>
@@ -370,10 +370,10 @@
           </div>
 
           <!-- Faculty 4 -->
-          <div>
-            <article>
+          <div class="col">
+            <article class="card h-100 faculty-card shadow-sm">
               <img src="img/Faculty-4.jpg" alt="Dr.B.K.Sharma">
-              <div>
+              <div class="card-body text-center">
                 <h5>Dr.B.K.Sharma</h5>
                 <p>{Faculty-4-Designation}</p>
                 <span title="{Faculty-4-Subject}">{Faculty-4-Subject}</span>
@@ -387,10 +387,10 @@
           </div>
 
           <!-- Faculty 5 -->
-          <div>
-            <article>
+          <div class="col">
+            <article class="card h-100 faculty-card shadow-sm">
               <img src="img/Faculty-5.jpg" alt="Dr.Parth Gautam">
-              <div>
+              <div class="card-body text-center">
                 <h5>Dr.Parth Gautam</h5>
                 <p>{Faculty-5-Designation}</p>
                 <span title="{Faculty-5-Subject}">{Faculty-5-Subject}</span>
@@ -404,10 +404,10 @@
           </div>
 
           <!-- Faculty 6 -->
-          <div>
-            <article>
+          <div class="col">
+            <article class="card h-100 faculty-card shadow-sm">
               <img src="img/Faculty-6.jpg" alt="Dr.Prathviraj Singh Rathore">
-              <div>
+              <div class="card-body text-center">
                 <h5>Dr.Prathviraj Singh Rathore</h5>
                 <p>{Faculty-6-Designation}</p>
                 <span title="{Faculty-6-Subject}">{Faculty-6-Subject}</span>
